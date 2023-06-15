@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipe3">
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="59dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#FDFDFD"
+        app:tint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/veg1"
+        app:layout_constraintVertical_bias="0.179"
+        app:srcCompat="@drawable/ic_outline_fav" />
+
+    <ImageButton
+        android:id="@+id/veg1"
+        android:layout_width="331dp"
+        android:layout_height="217dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_border"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="pic"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805"
+        app:srcCompat="@drawable/mex1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="335dp"
+        android:layout_height="101dp"
+        android:paddingLeft="15dp"
+        android:text="MEXICAN NACHOS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="355dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="277dp"
+                android:layout_height="43dp"
+                android:paddingLeft="15dp"
+                android:text="Description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="309dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="70dp"
+                android:paddingLeft="15dp"
+                android:text="Ingredients"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:text="1 recipe Fried Tortilla Chips or 5 cups purchased tortilla chips
+
+1 ½ cup Refried Beans or canned refried beans
+
+2 cup shredded cooked chicken, pork, or beef, or Carnitas or desired meat filling
+
+1 cup Mole Colorado or Quick Mole
+
+2 cup shredded Chihuahua cheese, queso de Oaxaca, asadero cheese, or shredded Mexican 4-cheese blend
+
+Toppers, such as purchased guacamole; Corn and Queso; chopped tomato; sliced ripe olives; thinly sliced red onion wedges; crumbled cotija cheese; Mexican crema or sour cream; fresh cilantro; sliced fresh jalapeño chile peppers; and/or additional Mole" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/veg1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

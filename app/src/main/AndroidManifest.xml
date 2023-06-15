@@ -13,6 +13,24 @@
         android:theme="@style/Theme.MiniProj"
         tools:targetApi="31">
         <activity
+            android:name=".Recipe5"
+            android:exported="false" />
+        <activity
+            android:name=".Recipe4"
+            android:exported="false" />
+        <activity
+            android:name=".Recipe3"
+            android:exported="false" />
+        <activity
+            android:name=".Recipe2"
+            android:exported="false" />
+        <activity
+            android:name=".Recipe1"
+            android:exported="false" />
+        <activity
+            android:name=".Test1"
+            android:exported="false" />
+        <activity
             android:name=".Homepage"
             android:exported="false" />
         <activity

@@ -124,7 +124,7 @@
         app:layout_constraintVertical_bias="0.286" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/non1"
         android:layout_width="60dp"
         android:layout_height="58dp"
         android:backgroundTint="#FFFFFF"
@@ -139,7 +139,7 @@
         app:tint="#5A7DD6" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/mex1"
         android:layout_width="63dp"
         android:layout_height="54dp"
         android:backgroundTint="#FFFFFF"

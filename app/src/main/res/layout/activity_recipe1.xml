@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipe1">
+
+    <ImageButton
+        android:id="@+id/veg1"
+        android:layout_width="331dp"
+        android:layout_height="217dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_border"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="pic"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805"
+        app:srcCompat="@drawable/non1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="327dp"
+        android:layout_height="43dp"
+        android:paddingLeft="15dp"
+        android:text="CHICKEN BIRYANI"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="59dp"
+        android:layout_height="58dp"
+        android:backgroundTint="#FDFDFD"
+        app:tint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/veg1"
+        app:layout_constraintVertical_bias="0.179"
+        app:srcCompat="@drawable/ic_outline_fav" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="409dp"
+        android:layout_height="355dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="277dp"
+                android:layout_height="43dp"
+                android:paddingLeft="15dp"
+                android:text="Description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="309dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="70dp"
+                android:paddingLeft="15dp"
+                android:text="Ingredients"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="match_parent"
+                android:layout_height="454dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:paddingLeft="15dp"
+                android:text=" Chicken, large pieces with bones- 1 kg
+                - Basmati Rice- 700 gms (4 US cup measure)
+
+                For Cooking Chicken:
+                - Onions, sliced- 400 gms (around 5 medium sized onions)
+                - Ginger Garlic paste- 2 tbsp
+                - Tomatoes, sliced- 4 medium
+                - Green Chillies, slit- 6 numbers
+                - Coriander leaves, chopped- 1 cup
+                - Mint leaves, chopped- 1 cup
+                - Whisked curd/plain yogurt- 1 cup
+                - Ready made Biryani Masala- 5 tbsp
+
+                For Cooking Rice:
+                - Shahjeera (caraway seeds) - 1/2 tsp
+                - Green cardamom - 4
+                - Cloves - 4
+                - Cinnamon- 2 pieces
+                - Salt- 2 1/2 tablespoon
+                - Water to boil the rice- around 2.5  litres
+                - Mint leaves - around 10- 15 leaves
+                " />
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="161dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/veg1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

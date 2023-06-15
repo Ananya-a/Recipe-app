@@ -75,20 +75,49 @@
                         app:contentPadding="10dp">
 
                         <TextView
-                            android:id="@+id/prog"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/festival"
+                            android:layout_width="75dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="75dp"
+                            android:text="Festival"
+                            android:textAlignment="center"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/imageView16"
+                            android:layout_width="74dp"
+                            android:layout_height="68dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="5dp"
+                            app:srcCompat="@drawable/festival" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="156dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="10dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="15dp">
+
+                        <TextView
+                            android:id="@+id/non"
+                            android:layout_width="74dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="70dp"
                             android:text="Non-veg"
-                            android:textSize="20sp" />
+                            android:textAlignment="center"
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/imageView11"
                             android:layout_width="74dp"
                             android:layout_height="68dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="3dp"
                             app:srcCompat="@drawable/nonveg" />
                     </androidx.cardview.widget.CardView>
 
@@ -102,13 +131,14 @@
                         app:contentPadding="10dp">
 
                         <TextView
-                            android:id="@+id/maths1"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/vegan"
+                            android:layout_width="75dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="75dp"
                             android:text="Vegan"
-                            android:textSize="20sp" />
+                            android:textAlignment="center"
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/imageView12"
@@ -129,14 +159,14 @@
                         app:contentPadding="10dp">
 
                         <TextView
-                            android:id="@+id/chem"
+                            android:id="@+id/veg"
                             android:layout_width="74dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="75dp"
                             android:text="Veg"
                             android:textAlignment="center"
-                            android:textSize="20sp" />
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/imageView10"
@@ -157,13 +187,14 @@
                         app:contentPadding="10dp">
 
                         <TextView
-                            android:id="@+id/mech"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/italian"
+                            android:layout_width="72dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="75dp"
                             android:text="Italian"
-                            android:textSize="20sp" />
+                            android:textAlignment="center"
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/imageView13"
@@ -184,13 +215,14 @@
                         app:contentPadding="10dp">
 
                         <TextView
-                            android:id="@+id/engg"
-                            android:layout_width="wrap_content"
+                            android:id="@+id/mex"
+                            android:layout_width="73dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_marginTop="75dp"
                             android:text="Mexican"
-                            android:textSize="20sp" />
+                            android:textAlignment="center"
+                            android:textSize="15sp" />
 
                         <ImageView
                             android:id="@+id/imageView14"
@@ -205,21 +237,153 @@
         </ScrollView>
     </HorizontalScrollView>
 
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="324dp"
+        android:layout_height="315dp"
         android:contentDescription="main">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="331dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="20sp"
+                android:layout_weight="1"
+                android:text="Recommendations"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="165dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/veg1"
+                    android:layout_width="192dp"
+                    android:layout_height="171dp"
+                    android:layout_marginLeft="10sp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:contentDescription="pic"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/dosa" />
+
+                <ImageButton
+                    android:id="@+id/non1"
+                    android:layout_width="194dp"
+                    android:layout_height="171dp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:contentDescription="pic"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/non1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/mex1"
+                    android:layout_width="190dp"
+                    android:layout_height="171dp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="5sp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:contentDescription="pic"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/mex1" />
+
+                <ImageButton
+                    android:id="@+id/ita1"
+                    android:layout_width="200dp"
+                    android:layout_height="171dp"
+                    android:layout_marginTop="5sp"
+                    android:adjustViewBounds="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:contentDescription="pic"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/italian1" />
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/fes1"
+                android:layout_width="196dp"
+                android:layout_height="171dp"
+                android:layout_marginLeft="10sp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#FFFFFF"
+                android:contentDescription="pic"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/dess1" />
+
 
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
+        android:layout_height="92dp"
+        android:layout_marginTop="15sp"
+        android:background="#F7F7F7">
+
+        <ImageButton
+            android:id="@+id/nav_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
+            android:backgroundTint="#F7F7F7"
+            android:contentDescription="home"
+            app:srcCompat="@drawable/ic_home"
+            app:tint="#3E61BA" />
+
+
+        <ImageButton
+            android:id="@+id/nav_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130sp"
+            android:backgroundTint="#F7F7F7"
+            android:contentDescription="fav"
+            app:srcCompat="@drawable/ic_fav"
+            app:tint="#DC0707" />
+
+        <ImageButton
+            android:id="@+id/nav_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220sp"
+            android:backgroundTint="#F7F7F7"
+            android:contentDescription="planner"
+            app:srcCompat="@drawable/ic_planner"
+            app:tint="#4CAF50" />
+
+        <ImageButton
+            android:id="@+id/nav_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="310sp"
+            android:backgroundTint="#F7F7F7"
+            android:contentDescription="logout"
+            app:srcCompat="@drawable/ic_out"
+            app:tint="#000000" />
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>
