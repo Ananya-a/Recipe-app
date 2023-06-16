@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="match_parent"
+        android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:paddingLeft="20sp"
         android:paddingTop="10sp"
@@ -354,14 +354,14 @@
 
 
         <ImageButton
-            android:id="@+id/nav_fav"
+            android:id="@+id/nav_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="130sp"
             android:backgroundTint="#F7F7F7"
             android:contentDescription="fav"
-            app:srcCompat="@drawable/ic_fav"
-            app:tint="#DC0707" />
+            app:srcCompat="@drawable/ic_user"
+            app:tint="#D86161" />
 
         <ImageButton
             android:id="@+id/nav_plan"

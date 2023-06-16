@@ -27,7 +27,9 @@
         android:id="@+id/login2"
         android:layout_width="234dp"
         android:layout_height="66dp"
+        android:backgroundTint="#92D813"
         android:text="LOGIN"
+        android:textColor="#fff"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +44,8 @@
         android:layout_height="57dp"
         android:ems="10"
         android:hint="Email"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +58,8 @@
         android:layout_height="58dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
+        android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +67,7 @@
         app:layout_constraintVertical_bias="0.468" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btn_back"
         android:layout_width="66dp"
         android:layout_height="57dp"
         android:backgroundTint="#FFFFFF"

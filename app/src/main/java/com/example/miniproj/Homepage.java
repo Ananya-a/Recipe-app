@@ -9,10 +9,15 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
 
 public class Homepage extends AppCompatActivity {
 
-    ImageButton non1, veg1, nav_out;
+    ImageButton non1, veg1, nav_out, nav_profile, nav_plan, nav_home;
+    private StorageReference storageRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +29,20 @@ public class Homepage extends AppCompatActivity {
         ImageButton ita1 = findViewById(R.id.ita1);
         ImageButton fes1 = findViewById(R.id.fes1);
         ImageButton nav_out = findViewById(R.id.nav_out);
+        ImageButton nav_profile = findViewById(R.id.nav_profile);
+        ImageButton nav_plan = findViewById(R.id.nav_plan);
+        ImageButton nav_home = findViewById(R.id.nav_home);
+
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        storageRef = storage.getReference();
+
 
         non1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Homepage.this, Recipe1.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
 
@@ -39,7 +51,7 @@ public class Homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Homepage.this, Recipe2.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
 
@@ -48,7 +60,7 @@ public class Homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Homepage.this, Recipe3.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
         ita1.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +68,7 @@ public class Homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Homepage.this, Recipe4.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
         fes1.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +76,7 @@ public class Homepage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Homepage.this, Recipe5.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
 
@@ -81,7 +93,33 @@ public class Homepage extends AppCompatActivity {
                 // Navigate to the login screen or any other appropriate screen
                 Intent intent = new Intent(Homepage.this, Login.class);
                 startActivity(intent);
-                finish(); // Optionally, call finish() to remove the current activity from the back stack
+                //finish(); // Optionally, call //finish() to remove the current activity from the back stack
+            }
+        });
+
+        nav_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this, Homepage.class);
+                startActivity(intent);
+            }
+        });
+
+        nav_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this, Profile.class);
+                startActivity(intent);
+                //finish();
+            }
+        });
+
+        nav_plan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Homepage.this, Test1.class);
+                startActivity(intent);
+                //finish();
             }
         });
     }

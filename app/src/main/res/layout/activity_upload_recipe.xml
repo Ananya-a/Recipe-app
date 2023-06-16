@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".upload_recipe">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:orientation="vertical" >
+
+
+        <ImageButton
+            android:id="@+id/btn_back2"
+            android:layout_width="56dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:contentDescription="back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back"
+            app:tint="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="181dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/text_recipe_name"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="20dp"
+            android:hint="Recipe Name"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginTop="10dp"
+            android:hint="Description"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/text_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:hint="Ingredients"
+            android:textSize="19sp"
+            tools:ignore="DuplicateIds" />
+
+        <Button
+            android:id="@+id/btnSelectImg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/black"
+            android:onClick="btnSelectImage"
+            android:text="Select Image"
+            android:textColor="#fff"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/black"
+            android:onClick="btnUploadRecipe"
+            android:text="Upload Recipe"
+            android:textColor="#fff"
+            android:textSize="22sp" />
+    </LinearLayout>
+</ScrollView>

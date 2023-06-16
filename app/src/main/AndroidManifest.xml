@@ -13,6 +13,12 @@
         android:theme="@style/Theme.MiniProj"
         tools:targetApi="31">
         <activity
+            android:name=".upload_recipe"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".Recipe5"
             android:exported="false" />
         <activity
