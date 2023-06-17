@@ -18,6 +18,16 @@ public class Homepage extends AppCompatActivity {
     ImageButton non1, veg1, nav_out, nav_profile, nav_plan, nav_home;
     private StorageReference storageRef;
 
+    public void categoryBtn(View view) {
+        Toast.makeText(getApplicationContext(),view.getTag().toString(),Toast.LENGTH_SHORT).show();
+
+        String selectedCategory = view.getTag().toString();
+        Intent intent = new Intent(Homepage.this, CategoryActivity.class);
+        intent.putExtra("selectedCategory", selectedCategory);
+        startActivity(intent);
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,7 +127,7 @@ public class Homepage extends AppCompatActivity {
         nav_plan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage.this, Test1.class);
+                Intent intent = new Intent(Homepage.this, meal_planner.class);
                 startActivity(intent);
                 //finish();
             }

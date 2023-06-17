@@ -1,0 +1,10 @@
+<resources>
+    <string-array name="categories_array">
+        <item>veg</item>
+        <item>non_veg</item>
+        <item>vegan</item>
+        <item>mexican</item>
+        <item>italian</item>
+        <item>festival</item>
+    </string-array>
+</resources>

@@ -68,6 +68,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="156dp"
                         android:layout_height="match_parent"
+                        android:onClick="categoryBtn"
+                        android:tag="festival"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="10dp"
                         app:cardPreventCornerOverlap="true"
@@ -96,6 +98,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="156dp"
                         android:layout_height="match_parent"
+                        android:onClick="categoryBtn"
+                        android:tag="non_veg"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="10dp"
                         app:cardPreventCornerOverlap="true"
@@ -124,6 +128,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="156dp"
                         android:layout_height="match_parent"
+                        android:onClick="categoryBtn"
+                        android:tag="vegan"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="10dp"
                         app:cardPreventCornerOverlap="true"
@@ -152,6 +158,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="156dp"
                         android:layout_height="158dp"
+                        android:onClick="categoryBtn"
+                        android:tag="veg"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="10dp"
                         app:cardPreventCornerOverlap="true"
@@ -180,6 +188,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="157dp"
                         android:layout_height="match_parent"
+                        android:onClick="categoryBtn"
+                        android:tag="italian"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="10dp"
                         app:cardPreventCornerOverlap="true"
@@ -208,6 +218,8 @@
                     <androidx.cardview.widget.CardView
                         android:layout_width="156dp"
                         android:layout_height="match_parent"
+                        android:onClick="categoryBtn"
+                        android:tag="mexican"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="10dp"
                         app:cardPreventCornerOverlap="true"

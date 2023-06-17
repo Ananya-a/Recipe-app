@@ -32,6 +32,15 @@
             android:layout_weight="1"
             android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/avatars" />
+        <Button
+            android:id="@+id/btnSelectImg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/black"
+            android:onClick="btnSelectImage"
+            android:text="Select Image"
+            android:textColor="#fff"
+            android:textSize="22sp" />
 
         <EditText
             android:id="@+id/text_recipe_name"
@@ -48,26 +57,46 @@
             android:layout_marginTop="10dp"
             android:hint="Description"
             android:textSize="19sp" />
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
         <EditText
-            android:id="@+id/text_ingredients"
+            android:id="@+id/ingredientEditText"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:layout_marginTop="10dp"
-            android:hint="Ingredients"
-            android:textSize="19sp"
-            tools:ignore="DuplicateIds" />
+            android:layout_height="69dp"
+            android:layout_weight="1"
+            android:hint="Enter Ingredient"
+            android:textSize="19sp"/>
 
-        <Button
-            android:id="@+id/btnSelectImg"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/black"
-            android:onClick="btnSelectImage"
-            android:text="Select Image"
-            android:textColor="#fff"
-            android:textSize="22sp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
+
+            <EditText
+                android:id="@+id/quantityEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:hint="Enter Quantity"
+
+                android:textSize="19sp"/>
+
+            <Button
+                android:id="@+id/addButton"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="Add" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ingredientsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"/>
         <Button
             android:id="@+id/btnUpload"
             android:layout_width="match_parent"

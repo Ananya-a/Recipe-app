@@ -8,64 +8,73 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import com.google.firebase.firestore.DocumentReference;
+import android.widget.Spinner;
+import android.widget.TextView;
+//import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.FirebaseFirestore;
+//import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class upload_recipe extends AppCompatActivity {
 
     ImageButton btn_back2;
     private static final int PICK_IMAGE_REQUEST = 1;
-    EditText name,desc,ingre;
+    EditText name,desc;
     private StorageReference storageRef;
     ImageView ivDisp;
+    private EditText ingredientEditText;
+    private EditText quantityEditText;
+    private Button addButton;
+    private Spinner category_spinner;
 
-    Button btnAdd,btnUpload;
+    private TextView ingredientsTextView;
+    private ArrayList<String> ingredientsList;
+    Button btnSelectImage,btnUpload;
     Uri selectedImageUri;
 
-    private void UploadToDB (String imageName) {
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
 
-// Access Firestore instance and create a reference to the collection
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-        String collectionName = firebaseAuth.getCurrentUser().getUid(); // Change this to your desired collection name
+    private void UploadToDB(String imageName) {
+        // Access the Firebase Realtime Database instance and create a reference
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference categoryRef = database.getReference("categories"); // Change "categories" to your desired reference name
 
-// Create a new document for the current user
-        String userId = currentUser.getUid();
-        DocumentReference userDocRef = firestore.collection(collectionName).document(userId);
+        // Create a unique key for the data based on the selected category
+        String selectedCategory = category_spinner.getSelectedItem().toString();
+        DatabaseReference categoryChildRef = categoryRef.child(selectedCategory).push();
 
-// Create a map with the details to be stored
-        Map<String, Object> userMap = new HashMap<>();
-        userMap.put("image", imageName);
-        userMap.put("name", name.getText().toString());
-        userMap.put("description", desc.getText().toString());
-        userMap.put("ingredients", ingre.getText().toString());
+        // Create a map with the details to be stored
+        Map<String, Object> recipeMap = new HashMap<>();
+        recipeMap.put("image", imageName);
+        recipeMap.put("name", name.getText().toString());
+        recipeMap.put("description", desc.getText().toString());
+        recipeMap.put("ingredients", ingredientsTextView.getText().toString());
+        recipeMap.put("category", selectedCategory);
 
-// Set the document with the user details
-        userDocRef.set(userMap)
+        // Set the recipe data in the Realtime Database under the selected category
+        categoryChildRef.setValue(recipeMap)
                 .addOnSuccessListener(aVoid -> {
-                    // Document created successfully
-                    Log.e("firebase","Success");
+                    // Data set successfully
+                    Log.e("firebase", "Success");
                     // Handle success scenario
                 })
                 .addOnFailureListener(e -> {
-                    // Error creating the document
-                    Log.e("Firestore", "Error creating document: " + e.getMessage());
+                    // Error setting the data
+                    Log.e("Realtime Database", "Error setting data: " + e.getMessage());
                     // Handle failure scenario
                 });
     }
@@ -115,11 +124,21 @@ public class upload_recipe extends AppCompatActivity {
             selectedImageUri = data.getData();
 
             ivDisp.setImageURI(selectedImageUri);
-
         }
     }
 
+    private void updateIngredientsTextView() {
+        StringBuilder builder = new StringBuilder();
+        for (String ingredient: ingredientsList) {
+            builder.append(ingredient).append("\n");
+        }
+        ingredientsTextView.setText(builder.toString());
+    }
 
+    private void clearFields() {
+        ingredientEditText.setText("");
+        quantityEditText.setText("");
+    }
 
 
     @Override
@@ -127,7 +146,7 @@ public class upload_recipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_recipe);
 
-        btnAdd  = findViewById(R.id.btnSelectImg);
+        btnSelectImage  = findViewById(R.id.btnSelectImg);
         btnUpload = findViewById(R.id.btnUpload);
         ImageView btn_back2 = findViewById(R.id.btn_back2);
         ivDisp = findViewById(R.id.imageView);
@@ -135,8 +154,23 @@ public class upload_recipe extends AppCompatActivity {
         storageRef = storage.getReference();
         name = findViewById(R.id.text_recipe_name);
         desc = findViewById(R.id.text_description);
-        ingre = findViewById(R.id.text_ingredients);
+        ingredientEditText = findViewById(R.id.ingredientEditText);
+        quantityEditText=findViewById(R.id.quantityEditText);
+        category_spinner = findViewById(R.id.category_spinner);
 
+
+        addButton = findViewById(R.id.addButton);
+        ingredientsTextView = findViewById(R.id.ingredientsTextView);
+        Spinner categorySpinner = findViewById(R.id.category_spinner);
+        ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.categories_array, // This should be a string array resource with your category options
+                android.R.layout.simple_spinner_item
+        );
+        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        categorySpinner.setAdapter(categoryAdapter);
+
+        ingredientsList = new ArrayList<>();
 
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,15 +179,26 @@ public class upload_recipe extends AppCompatActivity {
             }
         });
 
-        btnAdd.setOnClickListener(new View.OnClickListener() {
+        btnSelectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Open an image picker or gallery intent
                 openGallery();
-
             }
         });
 
+        categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedCategory = parent.getItemAtPosition(position).toString();
+                // Do something with the selected category
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Handle the case when nothing is selected
+            }
+        });
 
         btn_back2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,6 +209,20 @@ public class upload_recipe extends AppCompatActivity {
             }
         });
 
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ingredient = ingredientEditText.getText().toString().trim();
+                String quantity = quantityEditText.getText().toString().trim();
 
+                if (!ingredient.isEmpty() && !quantity.isEmpty()) {
+                    String ingredientQuantity = ingredient + " - " + quantity;
+                    ingredientsList.add(ingredientQuantity);
+
+                    updateIngredientsTextView();
+                    clearFields();
+                }
+            }
+        });
     }
 }

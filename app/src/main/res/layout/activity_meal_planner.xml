@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C18F8F"
+    android:backgroundTint="#A5BBED"
+    tools:context=".meal_planner">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#A5BBED"
+        android:orientation="vertical">
+
+        <!-- Replace this with your desired layout for the toolbar -->
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/black"
+            android:title="Meal Planner"
+            android:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:titleTextColor="#F3EFEF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A5BBED"
+            android:orientation="horizontal">
+
+            <!-- Monday -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/mon_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Monday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tuesday -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/tue_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Tuesday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Wednesday -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/wed_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Wednesday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Thursday -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/thur_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:background="#fff"
+                    android:hint="Thursday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Friday -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/fri_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Friday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Saturday -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/sat_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Saturday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Sunday Meal -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/sun_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Sunday's Meal"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Note -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#B6E6D0"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/note_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="119dp"
+                    android:hint="Note"
+                    android:inputType="textMultiLine" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- Replace this with your desired layout for the button or any other views -->
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/black"
+            android:text="Save"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
