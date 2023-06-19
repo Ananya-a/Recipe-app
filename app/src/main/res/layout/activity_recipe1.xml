@@ -42,7 +42,6 @@
         android:layout_width="59dp"
         android:layout_height="58dp"
         android:backgroundTint="#FDFDFD"
-        app:tint="#FF0000"
         android:contentDescription="pic"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +49,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/veg1"
         app:layout_constraintVertical_bias="0.179"
-        app:srcCompat="@drawable/ic_outline_fav" />
+        app:srcCompat="@drawable/ic_fav" />
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -96,23 +95,10 @@
                 - Basmati Rice- 700 gms (4 US cup measure)
 
                 For Cooking Chicken:
-                - Onions, sliced- 400 gms (around 5 medium sized onions)
-                - Ginger Garlic paste- 2 tbsp
-                - Tomatoes, sliced- 4 medium
-                - Green Chillies, slit- 6 numbers
-                - Coriander leaves, chopped- 1 cup
-                - Mint leaves, chopped- 1 cup
-                - Whisked curd/plain yogurt- 1 cup
-                - Ready made Biryani Masala- 5 tbsp
+                1.Onions, sliced- 400 gms (around 5 medium sized onions)\n2.Ginger Garlic paste- 2 tbsp\n3.Tomatoes, sliced- 4 medium\n4.Green Chillies, slit- 6 numbers\n5.Coriander leaves, chopped- 1 cup\n6.Mint leaves, chopped- 1 cup\n7.Whisked curd/plain yogurt- 1 cup\n8.Ready made Biryani Masala- 5 tbsp\n
 
                 For Cooking Rice:
-                - Shahjeera (caraway seeds) - 1/2 tsp
-                - Green cardamom - 4
-                - Cloves - 4
-                - Cinnamon- 2 pieces
-                - Salt- 2 1/2 tablespoon
-                - Water to boil the rice- around 2.5  litres
-                - Mint leaves - around 10- 15 leaves
+                1.Shahjeera (caraway seeds) - 1/2 tsp\n2.Green cardamom - 4\n3.Cloves - 4\n4.Cinnamon- 2 pieces\n5.Salt- 2 1/2 tablespoon\n6.Water to boil the rice- around 2.5  litres\n7.Mint leaves - around 10- 15 leaves\n
                 " />
 
             <VideoView

@@ -1,6 +1,8 @@
 package com.example.miniproj;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -101,6 +103,148 @@ public class meal_planner extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 saveData();
+            }
+        });
+
+        final CardView cardView1 = findViewById(R.id.cardView1);
+        final EditText mon_id = findViewById(R.id.mon_id);
+        final CardView cardView2 = findViewById(R.id.cardView2);
+        final EditText tue_id = findViewById(R.id.tue_id);
+        final CardView cardView3 = findViewById(R.id.cardView3);
+        final EditText wed_id = findViewById(R.id.wed_id);
+        final CardView cardView = findViewById(R.id.cardView);
+        final EditText thur_id = findViewById(R.id.thur_id);
+        final CardView cardView4 = findViewById(R.id.cardView4);
+        final EditText fri_id = findViewById(R.id.fri_id);
+        final CardView cardView5 = findViewById(R.id.cardView5);
+        final EditText sat_id = findViewById(R.id.sat_id);
+        final CardView cardView6 = findViewById(R.id.cardView6);
+        final EditText sun_id = findViewById(R.id.sun_id);
+
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView1.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+        cardView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView2.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+        cardView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView3.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+        cardView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView4.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+        cardView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView5.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+        cardView6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform cardView click actions here
+                // Example: Change cardView background color
+                cardView6.setCardBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.card_highlight_color));
+            }
+        });
+
+
+        mon_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                mon_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
+            }
+        });
+
+        tue_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                tue_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
+            }
+        });
+
+        wed_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                wed_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
+            }
+        });
+
+        thur_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                thur_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
+            }
+        });
+
+        fri_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                fri_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
+            }
+        });
+
+        sat_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                sat_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
+            }
+        });
+
+        sun_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform editText click actions here
+                // Example: Change editText background color
+                sun_id.setBackgroundColor(ContextCompat.getColor(meal_planner.this, R.color.edittext_highlight_color));
             }
         });
     }

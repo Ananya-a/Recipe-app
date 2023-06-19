@@ -12,18 +12,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="#A5BBED"
+        android:background="@drawable/test4"
         android:orientation="vertical">
 
         <!-- Replace this with your desired layout for the toolbar -->
-        <Toolbar
-            android:id="@+id/toolbar"
+
+        <TextView
+            android:id="@+id/textView15"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:background="@color/black"
-            android:title="Meal Planner"
-            android:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:titleTextColor="#F3EFEF" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="40sp"
+            android:layout_marginBottom="40sp"
+            android:text="Meal Planner"
+            android:textColor="#000"
+            android:textSize="35sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,16 +36,21 @@
 
             <!-- Monday -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                android:padding="8dp"
+                android:focusable="true"
+                android:clickable="true"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/mon_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
+                    android:background="#E6EAF9"
                     android:hint="Monday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -50,16 +58,21 @@
 
             <!-- Tuesday -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/tue_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
+                    android:background="#E6EAF9"
                     android:hint="Tuesday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -74,16 +87,21 @@
 
             <!-- Wednesday -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/wed_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
+                    android:background="#E6EAF9"
                     android:hint="Wednesday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -91,17 +109,22 @@
 
             <!-- Thursday -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                app:cardElevation="4dp"
+                android:padding="8dp"
+                android:focusable="true"
+                android:clickable="true"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/thur_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
-                    android:background="#fff"
+                    android:background="#E6EAF9"
                     android:hint="Thursday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -116,16 +139,21 @@
 
             <!-- Friday -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/fri_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
+                    android:background="#E6EAF9"
                     android:hint="Friday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -133,16 +161,21 @@
 
             <!-- Saturday -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/sat_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
+                    android:background="#E6EAF9"
                     android:hint="Saturday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -153,20 +186,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="40sp"
             android:orientation="horizontal">
 
             <!-- Sunday Meal -->
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:padding="8dp">
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                app:cardCornerRadius="20dp">
 
                 <EditText
                     android:id="@+id/sun_id"
                     android:layout_width="match_parent"
                     android:layout_height="119dp"
+                    android:background="#E6EAF9"
                     android:hint="Sunday's Meal"
                     android:inputType="textMultiLine" />
 
@@ -178,7 +217,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="#B6E6D0"
+                android:backgroundTint="#2C8B25F1"
                 android:padding="8dp">
 
                 <EditText
@@ -197,7 +236,7 @@
             android:id="@+id/saveBtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@color/black"
+            android:background="#68143563"
             android:text="Save"
             android:textColor="@color/white" />
 

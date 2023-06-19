@@ -11,14 +11,13 @@
         android:layout_width="59dp"
         android:layout_height="58dp"
         android:backgroundTint="#FDFDFD"
-        app:tint="#FF0000"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/veg1"
         app:layout_constraintVertical_bias="0.179"
-        app:srcCompat="@drawable/ic_outline_fav" />
+        app:srcCompat="@drawable/ic_fav" />
 
     <ImageButton
         android:id="@+id/veg1"
@@ -91,15 +90,14 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="2 x 200g sponge flan cases (25cm)
-6 tbsp strawberry jam or conserve
-400g strawberries (look for ones that are a similar size), halved
-600ml double cream
-2 tbsp icing sugar, plus 150g
-5 tbsp elderflower cordial
-5-6 raspberries or some pink food colouring gel
-small handful pistachios (optional), slivered or roughly chopped (see tip)
-strawberry coulis or cream, to serve" />
+                android:text="1. 2 x 200g sponge flan cases (25cm)\n
+2.6 tbsp strawberry jam or conserve\n
+3.400g strawberries (look for ones that are a similar size), halved\n
+4.600ml double cream\n
+5.2 tbsp icing sugar, plus 150g\n
+6.5 tbsp elderflower cordial\n
+7.5-6 raspberries or some pink food colouring gel\n
+8.small handful pistachios (optional), slivered or roughly chopped (see tip) strawberry coulis or cream, to serve"/>
 
         </LinearLayout>
     </ScrollView>

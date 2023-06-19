@@ -97,6 +97,14 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/instructionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:hint="Enter the instructions"
+            android:textSize="19sp" />
         <Button
             android:id="@+id/btnUpload"
             android:layout_width="match_parent"

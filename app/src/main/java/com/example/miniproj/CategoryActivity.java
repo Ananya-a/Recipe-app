@@ -1,10 +1,10 @@
 package com.example.miniproj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -55,9 +55,9 @@ public class CategoryActivity extends AppCompatActivity {
                     String name = recipeSnapshot.child("name").getValue(String.class);
                     String description = recipeSnapshot.child("description").getValue(String.class);
                     String ingredients = recipeSnapshot.child("ingredients").getValue(String.class);
-
+                    String instructions = recipeSnapshot.child("instructions").getValue(String.class);
                     // Create a Recipe object with the retrieved data
-                    Recipe recipe = new Recipe(name, description, ingredients, imageName);
+                    Recipe recipe = new Recipe(name, description, ingredients,instructions, imageName);
                     recipeList.add(recipe);
                 }
 

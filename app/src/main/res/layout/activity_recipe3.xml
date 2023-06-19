@@ -11,14 +11,13 @@
         android:layout_width="59dp"
         android:layout_height="58dp"
         android:backgroundTint="#FDFDFD"
-        app:tint="#FF0000"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/veg1"
         app:layout_constraintVertical_bias="0.179"
-        app:srcCompat="@drawable/ic_outline_fav" />
+        app:srcCompat="@drawable/ic_fav" />
 
     <ImageButton
         android:id="@+id/veg1"
@@ -91,16 +90,8 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="1 recipe Fried Tortilla Chips or 5 cups purchased tortilla chips
-
-1 ½ cup Refried Beans or canned refried beans
-
-2 cup shredded cooked chicken, pork, or beef, or Carnitas or desired meat filling
-
-1 cup Mole Colorado or Quick Mole
-
-2 cup shredded Chihuahua cheese, queso de Oaxaca, asadero cheese, or shredded Mexican 4-cheese blend
-
+                android:text="1.1 recipe Fried Tortilla Chips or 5 cups purchased tortilla chips\n2.1 ½ cup Refried Beans or canned refried beans
+\n3.2 cup shredded cooked chicken, pork, or beef, or Carnitas or desired meat filling\n4.1 cup Mole Colorado or Quick Mole\n5.2 cup shredded Chihuahua cheese, queso de Oaxaca, asadero cheese, or shredded Mexican 4-cheese blend\n
 Toppers, such as purchased guacamole; Corn and Queso; chopped tomato; sliced ripe olives; thinly sliced red onion wedges; crumbled cotija cheese; Mexican crema or sour cream; fresh cilantro; sliced fresh jalapeño chile peppers; and/or additional Mole" />
 
         </LinearLayout>

@@ -5,13 +5,16 @@ public class Recipe {
     private String description;
     private String ingredients;
     private String image;
+
+    private String instructions;
     private boolean expanded;
 
-    public Recipe(String name, String description, String ingredients, String image) {
+    public Recipe(String name, String description, String ingredients,String instructions, String image) {
         this.name = name;
         this.description = description;
         this.ingredients = ingredients;
         this.image = image;
+        this.instructions = instructions;
         this.expanded = false;
     }
 
@@ -25,6 +28,9 @@ public class Recipe {
     public String getIngredients() {
         return ingredients;
     }
+    public String getInstructions() {
+        return instructions;
+    }
 
     public String getImage() {
         return image;
@@ -37,5 +43,4 @@ public class Recipe {
     public void setExpanded(boolean expanded) {
         this.expanded = expanded;
     }
-
 }

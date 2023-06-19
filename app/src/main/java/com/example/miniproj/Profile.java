@@ -27,7 +27,7 @@ public class Profile extends AppCompatActivity {
         btn_plan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, Test1.class);
+                Intent intent = new Intent(Profile.this, meal_planner.class);
                 startActivity(intent);
             }
         });

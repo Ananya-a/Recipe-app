@@ -1,7 +1,6 @@
 package com.example.miniproj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,25 +15,25 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-//import com.google.firebase.firestore.DocumentReference;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-//import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 
 public class upload_recipe extends AppCompatActivity {
 
     ImageButton btn_back2;
     private static final int PICK_IMAGE_REQUEST = 1;
-    EditText name,desc;
+    EditText name,desc,  instructionEditText;
     private StorageReference storageRef;
     ImageView ivDisp;
     private EditText ingredientEditText;
@@ -64,6 +63,7 @@ public class upload_recipe extends AppCompatActivity {
         recipeMap.put("description", desc.getText().toString());
         recipeMap.put("ingredients", ingredientsTextView.getText().toString());
         recipeMap.put("category", selectedCategory);
+        recipeMap.put("instructions", instructionEditText.getText().toString());
 
         // Set the recipe data in the Realtime Database under the selected category
         categoryChildRef.setValue(recipeMap)
@@ -141,6 +141,7 @@ public class upload_recipe extends AppCompatActivity {
     }
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,6 +158,7 @@ public class upload_recipe extends AppCompatActivity {
         ingredientEditText = findViewById(R.id.ingredientEditText);
         quantityEditText=findViewById(R.id.quantityEditText);
         category_spinner = findViewById(R.id.category_spinner);
+        instructionEditText = findViewById(R.id.instructionEditText);
 
 
         addButton = findViewById(R.id.addButton);

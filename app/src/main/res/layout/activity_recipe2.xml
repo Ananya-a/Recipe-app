@@ -7,18 +7,18 @@
     tools:context=".Recipe2">
 
     <ImageButton
-        android:id="@+id/imageButton8"
+        android:id="@+id/likeIcon"
         android:layout_width="59dp"
         android:layout_height="58dp"
-        android:backgroundTint="#FDFDFD"
-        app:tint="#FF0000"
+        android:contentDescription="like"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/veg1"
         app:layout_constraintVertical_bias="0.179"
-        app:srcCompat="@drawable/ic_outline_fav" />
+        app:srcCompat="@drawable/ic_fav" />
+
 
     <ImageButton
         android:id="@+id/veg1"
@@ -91,20 +91,10 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="1-1/2 cups long grain rice
-                -1/2 cup urad dal (polished black lentil or white lentil)
-                -3 quarts water
-                -Salt
-                -1 medium onion, chopped
-                -1 – 2 green chilies, chopped
-                -1 Tbs. ghee (clarified butter) or regular butter
-                -1/2 tsp. black mustard seeds
-                -1/2 tsp. chana dal (split black chickpeas)
-                -1 sprig curry leaves
-                -1/2 tsp. turmeric powder
-                -2 large potatoes, boiled
-                -8 oz. coconut, cilantro and tomato chutney (optional)
-                -16 oz. sambar (vegetable lentil stew, optional)" />
+                android:text="1.1-1/2 cups long grain rice\n2.1/2 cup urad dal (polished black lentil or white lentil)\n3.3 quarts water\n4.Salt\n
+5.1 medium onion, chopped\n6.1 – 2 green chilies, chopped\n7.1 Tbs. ghee (clarified butter) or regular butter\n8.-1/2 tsp. black mustard seeds\n
+9.1/2 tsp. chana dal (split black chickpeas)\n10.1 sprig curry leaves\n11.1/2 tsp. turmeric powder\n12.2 large potatoes, boiled\n
+13.8 oz. coconut, cilantro and tomato chutney (optional)\n14.16 oz. sambar (vegetable lentil stew, optional)" />
 
         </LinearLayout>
     </ScrollView>

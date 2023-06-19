@@ -77,16 +77,11 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="2 1/2
-cups uncooked cavatappi pasta (8 oz)
-1/2
-lb bulk spicy Italian pork sausage
-6
-to 7 medium plum (Roma) tomatoes, seeded, chopped (about 1 1/2 cups)
-1
-cup whipping (heavy) cream
-1/2
-cup shredded fresh Parmesan cheese (2 oz)" />
+                android:text="1. 2 1/2cups uncooked cavatappi pasta (8 oz)\n
+2. 1/2 lb bulk spicy Italian pork sausage\n
+3. 6 to 7 medium plum (Roma) tomatoes, seeded, chopped (about 1 1/2 cups)\n
+4.1 cup whipping (heavy) cream\n
+5. 1/2 cup shredded fresh Parmesan cheese (2 oz)" />
 
         </LinearLayout>
     </ScrollView>
@@ -108,13 +103,12 @@ cup shredded fresh Parmesan cheese (2 oz)" />
         android:layout_width="59dp"
         android:layout_height="58dp"
         android:backgroundTint="#FDFDFD"
-        app:tint="#FF0000"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/veg1"
         app:layout_constraintVertical_bias="0.179"
-        app:srcCompat="@drawable/ic_outline_fav" />
+        app:srcCompat="@drawable/ic_fav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
