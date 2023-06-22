@@ -13,10 +13,6 @@ import com.example.miniproj.R;
 public class MainActivity extends AppCompatActivity {
     private static final long delay = 1000;
 
-    public void categoryBtn(View view) {
-        Toast.makeText(getApplicationContext(),view.getTag().toString(),Toast.LENGTH_SHORT).show();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

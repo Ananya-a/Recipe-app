@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -20,6 +21,14 @@ public class Recipe2 extends AppCompatActivity {
 
         ImageView back = findViewById(R.id.back);
         ImageButton likeIcon = findViewById(R.id.likeIcon);
+        ImageButton veg1 = findViewById(R.id.veg1);
+
+        veg1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.youtube.com/watch?v=J75VQSxOtdo");
+            }
+        });
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -56,5 +65,10 @@ public class Recipe2 extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }

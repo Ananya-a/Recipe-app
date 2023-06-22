@@ -20,8 +20,27 @@
         android:layout_marginBottom="132dp"
         android:text="RECIPE APP"
         android:textAlignment="center"
-        android:textColor="#006633"
+        android:textColor="#1D5EA5"
         android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="127dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="556dp"
+        android:fontFamily="sans-serif-black"
+        android:text="It's Cooking Time!"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <pl.droidsonroids.gif.GifImageView

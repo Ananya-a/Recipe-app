@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -16,8 +17,15 @@ public class Recipe4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipe4);
-
         ImageView back = findViewById(R.id.back);
+        ImageButton veg1 = findViewById(R.id.veg1);
+
+        veg1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.youtube.com/watch?v=CHUYtrCtre4");
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,5 +59,10 @@ public class Recipe4 extends AppCompatActivity {
                 editor.apply();
             }
         });
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }

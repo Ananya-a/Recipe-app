@@ -27,8 +27,6 @@ public class Homepage extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,7 +101,7 @@ public class Homepage extends AppCompatActivity {
                 // Navigate to the login screen or any other appropriate screen
                 Intent intent = new Intent(Homepage.this, Login.class);
                 startActivity(intent);
-                //finish(); // Optionally, call //finish() to remove the current activity from the back stack
+                finish(); // Optionally, call //finish() to remove the current activity from the back stack
             }
         });
 

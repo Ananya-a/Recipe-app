@@ -154,7 +154,6 @@ public class upload_recipe extends AppCompatActivity {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         storageRef = storage.getReference();
         name = findViewById(R.id.text_recipe_name);
-        desc = findViewById(R.id.text_description);
         ingredientEditText = findViewById(R.id.ingredientEditText);
         quantityEditText=findViewById(R.id.quantityEditText);
         category_spinner = findViewById(R.id.category_spinner);

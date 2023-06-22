@@ -37,6 +37,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.428" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="87dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="232dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_yt" />
+
     <ImageButton
         android:id="@+id/imageButton7"
         android:layout_width="59dp"
@@ -100,11 +111,6 @@
                 For Cooking Rice:
                 1.Shahjeera (caraway seeds) - 1/2 tsp\n2.Green cardamom - 4\n3.Cloves - 4\n4.Cinnamon- 2 pieces\n5.Salt- 2 1/2 tablespoon\n6.Water to boil the rice- around 2.5  litres\n7.Mint leaves - around 10- 15 leaves\n
                 " />
-
-            <VideoView
-                android:id="@+id/videoView"
-                android:layout_width="match_parent"
-                android:layout_height="161dp" />
 
         </LinearLayout>
     </ScrollView>

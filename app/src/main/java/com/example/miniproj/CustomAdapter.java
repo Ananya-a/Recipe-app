@@ -245,7 +245,6 @@ public class CustomAdapter extends BaseAdapter {
             viewHolder.cardView = convertView.findViewById(R.id.cardView);
             viewHolder.imageView = convertView.findViewById(R.id.expandedImageView);
             viewHolder.nameTextView = convertView.findViewById(R.id.expandedNameTextView);
-            viewHolder.expandedDescriptionTextView=convertView.findViewById(R.id.expandedDescriptionTextView);
             viewHolder.expandedIngredientTextView=convertView.findViewById(R.id.expandedIngredientsTextView);
             viewHolder.expandedInstructionTextView=convertView.findViewById(R.id.expandedInstructionsTextView);
 
@@ -258,7 +257,6 @@ public class CustomAdapter extends BaseAdapter {
             viewHolder.cardView = convertView.findViewById(R.id.cardView);
             viewHolder.imageView = convertView.findViewById(R.id.expandedImageView);
             viewHolder.nameTextView = convertView.findViewById(R.id.expandedNameTextView);
-            viewHolder.expandedDescriptionTextView=convertView.findViewById(R.id.expandedDescriptionTextView);
             viewHolder.expandedIngredientTextView=convertView.findViewById(R.id.expandedIngredientsTextView);
             viewHolder.expandedInstructionTextView=convertView.findViewById(R.id.expandedInstructionsTextView);
         }
@@ -295,7 +293,6 @@ public class CustomAdapter extends BaseAdapter {
 
         // Set the name
         viewHolder.nameTextView.setText(recipe.getName());
-        viewHolder.expandedDescriptionTextView.setText(recipe.getDescription());
         viewHolder.expandedInstructionTextView.setText(recipe.getInstructions());
         viewHolder.expandedIngredientTextView.setText(recipe.getIngredients());
 
@@ -314,6 +311,6 @@ public class CustomAdapter extends BaseAdapter {
     private static class ViewHolder {
         CardView cardView;
         ImageView imageView;
-        TextView nameTextView,expandedDescriptionTextView,expandedIngredientTextView,expandedInstructionTextView;
+        TextView nameTextView,expandedIngredientTextView,expandedInstructionTextView;
     }
 }

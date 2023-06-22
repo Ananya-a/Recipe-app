@@ -36,6 +36,17 @@
         app:layout_constraintVertical_bias="0.805"
         app:srcCompat="@drawable/dess1" />
 
+    <ImageView
+        android:id="@+id/iv5"
+        android:layout_width="87dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="216dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_yt" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="325dp"

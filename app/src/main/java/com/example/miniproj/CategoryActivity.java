@@ -53,11 +53,10 @@ public class CategoryActivity extends AppCompatActivity {
                     // Retrieve the recipe details
                     String imageName = recipeSnapshot.child("image").getValue(String.class);
                     String name = recipeSnapshot.child("name").getValue(String.class);
-                    String description = recipeSnapshot.child("description").getValue(String.class);
                     String ingredients = recipeSnapshot.child("ingredients").getValue(String.class);
                     String instructions = recipeSnapshot.child("instructions").getValue(String.class);
                     // Create a Recipe object with the retrieved data
-                    Recipe recipe = new Recipe(name, description, ingredients,instructions, imageName);
+                    Recipe recipe = new Recipe(name, ingredients,instructions, imageName);
                     recipeList.add(recipe);
                 }
 
