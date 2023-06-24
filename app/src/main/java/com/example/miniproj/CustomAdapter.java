@@ -247,6 +247,7 @@ public class CustomAdapter extends BaseAdapter {
             viewHolder.nameTextView = convertView.findViewById(R.id.expandedNameTextView);
             viewHolder.expandedIngredientTextView=convertView.findViewById(R.id.expandedIngredientsTextView);
             viewHolder.expandedInstructionTextView=convertView.findViewById(R.id.expandedInstructionsTextView);
+            viewHolder.btn_yt=convertView.findViewById(R.id.btn_yt);
 
             convertView.setTag(viewHolder);
         } else {
@@ -259,6 +260,7 @@ public class CustomAdapter extends BaseAdapter {
             viewHolder.nameTextView = convertView.findViewById(R.id.expandedNameTextView);
             viewHolder.expandedIngredientTextView=convertView.findViewById(R.id.expandedIngredientsTextView);
             viewHolder.expandedInstructionTextView=convertView.findViewById(R.id.expandedInstructionsTextView);
+            viewHolder.btn_yt=convertView.findViewById(R.id.btn_yt);
         }
 
         // Get the recipe for this position
@@ -287,7 +289,7 @@ public class CustomAdapter extends BaseAdapter {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
-                Toast.makeText(context.getApplicationContext(), "No Such file or Path found!!", Toast.LENGTH_LONG).show();
+//                Toast.makeText(context.getApplicationContext(), "No Such file or Path found!!", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -295,13 +297,14 @@ public class CustomAdapter extends BaseAdapter {
         viewHolder.nameTextView.setText(recipe.getName());
         viewHolder.expandedInstructionTextView.setText(recipe.getInstructions());
         viewHolder.expandedIngredientTextView.setText(recipe.getIngredients());
+//        viewHolder.btn_yt.setImageURI(recipe.getYoutube());
 
         // Set onClickListener for the CardView
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Handle click event if needed
-                Toast.makeText(context, "CardView clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "CardView clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -311,6 +314,7 @@ public class CustomAdapter extends BaseAdapter {
     private static class ViewHolder {
         CardView cardView;
         ImageView imageView;
-        TextView nameTextView,expandedIngredientTextView,expandedInstructionTextView;
+        TextView nameTextView,expandedIngredientTextView, expandedInstructionTextView;
+        ImageView btn_yt;
     }
 }

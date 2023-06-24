@@ -22,7 +22,7 @@ public class Profile extends AppCompatActivity {
         btn_plan = findViewById(R.id.btn_plan);
         btn_upload = findViewById(R.id.btn_upload);
         back_btn = findViewById(R.id.back_btn);
-        btn_like = findViewById(R.id.btn_like);
+//        btn_like = findViewById(R.id.btn_like);
 
 
         btn_plan.setOnClickListener(new View.OnClickListener() {
@@ -42,13 +42,13 @@ public class Profile extends AppCompatActivity {
         });
 
 
-        btn_like.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Profile.this, Likedrecipesactivity.class);
-                startActivity(intent);
-            }
-        });
+//        btn_like.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Profile.this, Likedrecipesactivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
         back_btn.setOnClickListener(new View.OnClickListener() {

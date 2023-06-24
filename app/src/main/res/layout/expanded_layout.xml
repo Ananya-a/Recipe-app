@@ -19,19 +19,19 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop" />
 
-        <ImageButton
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#FDFDFD"
-            android:contentDescription="liked"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.36"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/veg1"
-            app:layout_constraintVertical_bias="0.179"
-            app:srcCompat="@drawable/ic_fav" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/btn1"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="#FDFDFD"-->
+<!--            android:contentDescription="liked"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/scrollView2"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.36"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textView2"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/veg1"-->
+<!--            app:layout_constraintVertical_bias="0.179"-->
+<!--            app:srcCompat="@drawable/ic_fav" />-->
 
         <TextView
             android:id="@+id/expandedNameTextView"
@@ -68,6 +68,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp" />
+
+        <ImageView
+            android:id="@+id/btn_yt"
+            android:layout_width="54dp"
+            android:layout_height="34dp"
+            app:srcCompat="@drawable/ic_yt" />
 
     </LinearLayout>
 

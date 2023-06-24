@@ -72,10 +72,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:text="Italian pasta is a beloved staple of Italian cuisine. Made from durum wheat semolina, it comes in various shapes and sizes, and is typically served with a variety of sauces, such as tomato-based marinara, creamy alfredo, or pesto." />
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="309dp"
                 android:layout_height="52dp"
-                android:layout_marginTop="70dp"
                 android:paddingLeft="15dp"
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />

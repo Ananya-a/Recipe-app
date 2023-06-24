@@ -33,7 +33,7 @@ public class upload_recipe extends AppCompatActivity {
 
     ImageButton btn_back2;
     private static final int PICK_IMAGE_REQUEST = 1;
-    EditText name,desc,  instructionEditText;
+    EditText name,instructionEditText;
     private StorageReference storageRef;
     ImageView ivDisp;
     private EditText ingredientEditText;
@@ -60,7 +60,7 @@ public class upload_recipe extends AppCompatActivity {
         Map<String, Object> recipeMap = new HashMap<>();
         recipeMap.put("image", imageName);
         recipeMap.put("name", name.getText().toString());
-        recipeMap.put("description", desc.getText().toString());
+       // recipeMap.put("description", desc.getText().toString());
         recipeMap.put("ingredients", ingredientsTextView.getText().toString());
         recipeMap.put("category", selectedCategory);
         recipeMap.put("instructions", instructionEditText.getText().toString());

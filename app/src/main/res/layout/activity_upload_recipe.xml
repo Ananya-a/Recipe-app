@@ -31,7 +31,9 @@
             android:layout_height="181dp"
             android:layout_weight="1"
             android:scaleType="centerCrop"
+            android:background="@drawable/border_shape"
             tools:srcCompat="@tools:sample/avatars" />
+
         <Button
             android:id="@+id/btnSelectImg"
             android:layout_width="match_parent"
@@ -86,14 +88,6 @@
 
         </LinearLayout>
 
-        <SeekBar
-            android:id="@+id/servingSizeSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:max="10"
-            android:progress="1"
-            android:layout_marginTop="10dp" />
-
         <TextView
             android:id="@+id/ingredientsTextView"
             android:layout_width="match_parent"
@@ -107,6 +101,7 @@
             android:layout_marginTop="20dp"
             android:hint="Enter the instructions"
             android:textSize="19sp" />
+
         <Button
             android:id="@+id/btnUpload"
             android:layout_width="match_parent"

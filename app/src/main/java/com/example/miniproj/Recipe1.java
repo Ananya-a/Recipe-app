@@ -63,7 +63,6 @@ public class Recipe1 extends AppCompatActivity {
                     likeIcon.clearColorFilter();
                 }
 
-
                     // Save the state and color to SharedPreferences
                     editor.putBoolean("liked", isLiked);
                     editor.putInt("likeColor", isLiked ? Color.RED : Color.TRANSPARENT);

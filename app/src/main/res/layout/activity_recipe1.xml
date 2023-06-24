@@ -86,10 +86,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:text="Chicken Biryani is a fragrant and aromatic rice dish originating from the Indian subcontinent. It features succulent chicken pieces cooked with basmati rice, a blend of spices, and sometimes includes caramelized onions, raisins, and saffron." />
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="309dp"
                 android:layout_height="52dp"
-                android:layout_marginTop="70dp"
                 android:paddingLeft="15dp"
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />

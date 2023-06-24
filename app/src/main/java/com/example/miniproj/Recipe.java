@@ -5,6 +5,7 @@ public class Recipe {
     private String ingredients;
     private String image;
     private String instructions;
+    private String youtube;
     private boolean expanded;
 
     public Recipe(String name, String ingredients,String instructions, String image) {
@@ -12,6 +13,7 @@ public class Recipe {
         this.ingredients = ingredients;
         this.image = image;
         this.instructions = instructions;
+        this.youtube = youtube;
         this.expanded = false;
     }
 
@@ -23,6 +25,9 @@ public class Recipe {
     }
     public String getInstructions() {
         return instructions;
+    }
+    public String getYoutube() {
+        return youtube;
     }
     public String getImage() {
         return image;

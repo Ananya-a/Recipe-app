@@ -85,10 +85,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="103dp"
+                android:text="Mexican Nachos are a popular Tex-Mex snack or appetizer. They consist of crispy tortilla chips topped with melted cheese, jalapenos, salsa, guacamole, sour cream, and sometimes beans or meat." />
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="309dp"
                 android:layout_height="52dp"
-                android:layout_marginTop="70dp"
                 android:paddingLeft="15dp"
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />

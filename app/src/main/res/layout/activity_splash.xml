@@ -9,12 +9,12 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="341dp"
-        android:layout_height="89dp"
-        android:text="RECIPE APP"
+        android:layout_width="277dp"
+        android:layout_height="91dp"
+        android:text="THE RECIPE REPOSITORY"
         android:textAlignment="center"
         android:textColor="#351968"
-        android:textSize="50sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

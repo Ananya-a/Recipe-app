@@ -85,10 +85,15 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="107dp"
+                android:text="Strawberry pastry is a delectable dessert featuring a light and flaky pastry filled with luscious, sweet strawberries. It offers a delightful combination of buttery pastry and juicy fruit, often accompanied by a dusting of powdered sugar or a dollop of whipped cream." />
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="309dp"
                 android:layout_height="52dp"
-                android:layout_marginTop="70dp"
                 android:paddingLeft="15dp"
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
