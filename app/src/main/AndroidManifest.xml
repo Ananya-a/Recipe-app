@@ -69,9 +69,6 @@
             android:name=".Recipe1"
             android:exported="false" />
         <activity
-            android:name=".Test1"
-            android:exported="false" />
-        <activity
             android:name=".Homepage"
             android:exported="false" />
         <activity
