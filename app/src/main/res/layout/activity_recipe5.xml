@@ -88,6 +88,8 @@
                 android:id="@+id/textView19"
                 android:layout_width="match_parent"
                 android:layout_height="107dp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:text="Strawberry pastry is a delectable dessert featuring a light and flaky pastry filled with luscious, sweet strawberries. It offers a delightful combination of buttery pastry and juicy fruit, often accompanied by a dusting of powdered sugar or a dollop of whipped cream." />
 
             <TextView
@@ -98,7 +100,7 @@
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,14 +108,7 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="1. 2 x 200g sponge flan cases (25cm)\n
-2.6 tbsp strawberry jam or conserve\n
-3.400g strawberries (look for ones that are a similar size), halved\n
-4.600ml double cream\n
-5.2 tbsp icing sugar, plus 150g\n
-6.5 tbsp elderflower cordial\n
-7.5-6 raspberries or some pink food colouring gel\n
-8.small handful pistachios (optional), slivered or roughly chopped (see tip) strawberry coulis or cream, to serve"/>
+                android:text="1. 2 x 200g sponge flan cases (25cm)\n2.6 tbsp strawberry jam or conserve\n3.400g strawberries (look for ones that are a similar size), halved\n4.600ml double cream\n5.2 tbsp icing sugar, plus 150g\n6.5 tbsp elderflower cordial\n7.5-6 raspberries or some pink food colouring gel\n8.small handful pistachios (optional), slivered or roughly chopped (see tip) strawberry coulis or cream, to serve"/>
 
         </LinearLayout>
     </ScrollView>

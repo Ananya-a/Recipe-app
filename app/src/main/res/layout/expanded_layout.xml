@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
@@ -33,21 +34,42 @@
 <!--            app:layout_constraintVertical_bias="0.179"-->
 <!--            app:srcCompat="@drawable/ic_fav" />-->
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/expandedNameTextView"
-            android:layout_width="match_parent"
+            android:layout_width="296dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="5sp"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Ingredients:"
-            android:textColor="#000"
-            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/btn_yt"
+            android:layout_width="53dp"
+            android:layout_height="30sp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_yt" />
+
+
+    </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="278dp"
+                android:layout_height="wrap_content"
+                android:text="Ingredients:"
+                android:textColor="#000"
+                android:textStyle="bold" />
+
+
+
+
 
         <TextView
             android:id="@+id/expandedIngredientsTextView"
@@ -68,12 +90,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp" />
-
-        <ImageView
-            android:id="@+id/btn_yt"
-            android:layout_width="54dp"
-            android:layout_height="34dp"
-            app:srcCompat="@drawable/ic_yt" />
 
     </LinearLayout>
 

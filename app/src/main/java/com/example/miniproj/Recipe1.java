@@ -13,8 +13,6 @@ import android.widget.ImageView;
 
 public class Recipe1 extends AppCompatActivity {
 
-//    ImageView back;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,33 +39,30 @@ public class Recipe1 extends AppCompatActivity {
             }
         });
 
-
-
-
-
         likeIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int flag = 0;
 
+                // Retrieve the saved state and color
                 SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                int flag=0;
+                boolean isLiked = sharedPreferences.getBoolean("liked", false);
+                int likeColor = sharedPreferences.getInt("likeColor", Color.TRANSPARENT);
+
+                // Apply the saved state and color to the likeIcon
+                likeIcon.setColorFilter(likeColor);
+
                 // Change the state and color
-                boolean isLiked = !sharedPreferences.getBoolean("liked", false);
-
+                isLiked = !isLiked;
                 if (isLiked) {
-                    flag=1;
+                    flag = 1;
                     likeIcon.setColorFilter(Color.RED);
+                    likeColor = Color.RED;
                 } else {
-                    flag=0;
+                    flag = 0;
                     likeIcon.clearColorFilter();
+                    likeColor = Color.TRANSPARENT;
                 }
-
-                    // Save the state and color to SharedPreferences
-                    editor.putBoolean("liked", isLiked);
-                    editor.putInt("likeColor", isLiked ? Color.RED : Color.TRANSPARENT);
-                    editor.apply();
-
             }
         });
     }

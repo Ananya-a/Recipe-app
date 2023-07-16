@@ -88,6 +88,8 @@
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="103dp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:text="Mexican Nachos are a popular Tex-Mex snack or appetizer. They consist of crispy tortilla chips topped with melted cheese, jalapenos, salsa, guacamole, sour cream, and sometimes beans or meat." />
 
             <TextView
@@ -98,7 +100,7 @@
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,9 +108,7 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="1.1 recipe Fried Tortilla Chips or 5 cups purchased tortilla chips\n2.1 ½ cup Refried Beans or canned refried beans
-\n3.2 cup shredded cooked chicken, pork, or beef, or Carnitas or desired meat filling\n4.1 cup Mole Colorado or Quick Mole\n5.2 cup shredded Chihuahua cheese, queso de Oaxaca, asadero cheese, or shredded Mexican 4-cheese blend\n
-Toppers, such as purchased guacamole; Corn and Queso; chopped tomato; sliced ripe olives; thinly sliced red onion wedges; crumbled cotija cheese; Mexican crema or sour cream; fresh cilantro; sliced fresh jalapeño chile peppers; and/or additional Mole" />
+                android:text="1.1 recipe Fried Tortilla Chips or 5 cups purchased tortilla chips\n2.1 ½ cup Refried Beans or canned refried beans\n3.2 cup shredded cooked chicken, pork, or beef, or Carnitas or desired meat filling\n4.1 cup Mole Colorado or Quick Mole\n5.2 cup shredded Chihuahua cheese, queso de Oaxaca, asadero cheese, or shredded Mexican 4-cheese blend\nToppers, such as purchased guacamole; Corn and Queso; chopped tomato; sliced ripe olives; thinly sliced red onion wedges; crumbled cotija cheese; Mexican crema or sour cream; fresh cilantro; sliced fresh jalapeño chile peppers; and/or additional Mole" />
 
         </LinearLayout>
     </ScrollView>

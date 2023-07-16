@@ -13,8 +13,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,6 +28,7 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Queue;
 import java.util.UUID;
 
 
@@ -43,9 +46,8 @@ public class upload_recipe extends AppCompatActivity {
 
     private TextView ingredientsTextView;
     private ArrayList<String> ingredientsList;
-    Button btnSelectImage,btnUpload;
+    Button btnSelectImage, btnUpload;
     Uri selectedImageUri;
-
 
     private void UploadToDB(String imageName) {
         // Access the Firebase Realtime Database instance and create a reference
@@ -122,7 +124,6 @@ public class upload_recipe extends AppCompatActivity {
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
             // Retrieve the image URI from the intent
             selectedImageUri = data.getData();
-
             ivDisp.setImageURI(selectedImageUri);
         }
     }
@@ -138,6 +139,15 @@ public class upload_recipe extends AppCompatActivity {
     private void clearFields() {
         ingredientEditText.setText("");
         quantityEditText.setText("");
+    }
+
+    private void clearFieldsUpload() {
+        ingredientEditText.setText("");
+        quantityEditText.setText("");
+        name.setText("");
+        instructionEditText.setText("");
+        ingredientsTextView.setText("");
+        instructionEditText.setText("");
     }
 
 
@@ -176,8 +186,23 @@ public class upload_recipe extends AppCompatActivity {
         btnUpload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadImage();
+                String inst = instructionEditText.getText().toString().trim();
+                String nameField = name.getText().toString().trim();
+
+                if(!inst.isEmpty() && !nameField.isEmpty())
+                {
+                    uploadImage();
+
+                    Intent intent = new Intent(upload_recipe.this, progress.class);
+                    startActivity(intent);
+
+                    clearFieldsUpload();
+                }
+                else {
+                    Toast.makeText(upload_recipe.this, "WARNING: Fill all the fields before uploading.", Toast.LENGTH_SHORT).show();
+                }
             }
+            ProgressBar progressBar = findViewById(R.id.progressBar);
         });
 
         btnSelectImage.setOnClickListener(new View.OnClickListener() {

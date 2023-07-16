@@ -89,6 +89,8 @@
                 android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="98dp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:text="Masala Dosa is a popular South Indian delicacy made by fermenting a batter of rice and lentils. It is a thin, crispy crepe filled with a flavorful mixture of mashed potatoes, onions, and spices." />
 
             <TextView
@@ -99,7 +101,7 @@
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -107,10 +109,7 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="1.1-1/2 cups long grain rice\n2.1/2 cup urad dal (polished black lentil or white lentil)\n3.3 quarts water\n4.Salt\n
-5.1 medium onion, chopped\n6.1 – 2 green chilies, chopped\n7.1 Tbs. ghee (clarified butter) or regular butter\n8.-1/2 tsp. black mustard seeds\n
-9.1/2 tsp. chana dal (split black chickpeas)\n10.1 sprig curry leaves\n11.1/2 tsp. turmeric powder\n12.2 large potatoes, boiled\n
-13.8 oz. coconut, cilantro and tomato chutney (optional)\n14.16 oz. sambar (vegetable lentil stew, optional)" />
+                android:text="1.1-1/2 cups long grain rice\n2.1/2 cup urad dal (polished black lentil or white lentil)\n3.3 quarts water\n4.Salt\n5.1 medium onion, chopped\n6.1 – 2 green chilies, chopped\n7.1 Tbs. ghee (clarified butter) or regular butter\n8.-1/2 tsp. black mustard seeds\n9.1/2 tsp. chana dal (split black chickpeas)\n10.1 sprig curry leaves\n11.1/2 tsp. turmeric powder\n12.2 large potatoes, boiled\n13.8 oz. coconut, cilantro and tomato chutney (optional)\n14.16 oz. sambar (vegetable lentil stew, optional)" />
 
         </LinearLayout>
     </ScrollView>

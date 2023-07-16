@@ -89,6 +89,8 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:text="Chicken Biryani is a fragrant and aromatic rice dish originating from the Indian subcontinent. It features succulent chicken pieces cooked with basmati rice, a blend of spices, and sometimes includes caramelized onions, raisins, and saffron." />
 
             <TextView
@@ -99,7 +101,7 @@
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="454dp"
@@ -107,15 +109,7 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text=" Chicken, large pieces with bones- 1 kg
-                - Basmati Rice- 700 gms (4 US cup measure)
-
-                For Cooking Chicken:
-                1.Onions, sliced- 400 gms (around 5 medium sized onions)\n2.Ginger Garlic paste- 2 tbsp\n3.Tomatoes, sliced- 4 medium\n4.Green Chillies, slit- 6 numbers\n5.Coriander leaves, chopped- 1 cup\n6.Mint leaves, chopped- 1 cup\n7.Whisked curd/plain yogurt- 1 cup\n8.Ready made Biryani Masala- 5 tbsp\n
-
-                For Cooking Rice:
-                1.Shahjeera (caraway seeds) - 1/2 tsp\n2.Green cardamom - 4\n3.Cloves - 4\n4.Cinnamon- 2 pieces\n5.Salt- 2 1/2 tablespoon\n6.Water to boil the rice- around 2.5  litres\n7.Mint leaves - around 10- 15 leaves\n
-                " />
+                android:text="Chicken, large pieces with bones- 1 kg\n- Basmati Rice- 700 gms (4 US cup measure)\n\n\nFor Cooking Chicken:\n\n1.Onions, sliced- 400 gms (around 5 medium sized onions)\n2.Ginger Garlic paste- 2 tbsp\n3.Tomatoes, sliced- 4 medium\n4.Green Chillies, slit- 6 numbers\n5.Coriander leaves, chopped- 1 cup\n6.Mint leaves, chopped- 1 cup\n7.Whisked curd/plain yogurt- 1 cup\n8.Ready made Biryani Masala- 5 tbsp\n\nFor Cooking Rice:\n\n1.Shahjeera (caraway seeds) - 1/2 tsp\n2.Green cardamom - 4\n3.Cloves - 4\n4.Cinnamon- 2 pieces\n5.Salt- 2 1/2 tablespoon\n6.Water to boil the rice- around 2.5  litres\n7.Mint leaves - around 10- 15 leaves\n" />
 
         </LinearLayout>
     </ScrollView>

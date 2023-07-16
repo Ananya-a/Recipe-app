@@ -8,11 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Profile extends AppCompatActivity {
 
     ImageView back_btn;
     Button btn_plan, btn_upload, btn_like;
+
+    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+    FirebaseUser user = firebaseAuth.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +30,17 @@ public class Profile extends AppCompatActivity {
         btn_upload = findViewById(R.id.btn_upload);
         back_btn = findViewById(R.id.back_btn);
 //        btn_like = findViewById(R.id.btn_like);
+
+        String uid = null;
+        if (user != null) {
+            uid = user.getEmail();
+            // Display or use the UID as per your requirements
+        } else {
+            // User is not signed in
+        }
+
+        TextView textViewUid = findViewById(R.id.id);
+        textViewUid.setText(uid);
 
 
         btn_plan.setOnClickListener(new View.OnClickListener() {

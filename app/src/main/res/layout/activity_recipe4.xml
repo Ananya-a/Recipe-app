@@ -75,6 +75,8 @@
                 android:id="@+id/textView18"
                 android:layout_width="match_parent"
                 android:layout_height="115dp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
                 android:text="Italian pasta is a beloved staple of Italian cuisine. Made from durum wheat semolina, it comes in various shapes and sizes, and is typically served with a variety of sauces, such as tomato-based marinara, creamy alfredo, or pesto." />
 
             <TextView
@@ -85,7 +87,7 @@
                 android:text="Ingredients"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-            <EditText
+            <TextView
                 android:id="@+id/editTextTextMultiLine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,11 +95,7 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:paddingLeft="15dp"
-                android:text="1. 2 1/2cups uncooked cavatappi pasta (8 oz)\n
-2. 1/2 lb bulk spicy Italian pork sausage\n
-3. 6 to 7 medium plum (Roma) tomatoes, seeded, chopped (about 1 1/2 cups)\n
-4.1 cup whipping (heavy) cream\n
-5. 1/2 cup shredded fresh Parmesan cheese (2 oz)" />
+                android:text="1. 2 1/2cups uncooked cavatappi pasta (8 oz)\n2. 1/2 lb bulk spicy Italian pork sausage\n3. 6 to 7 medium plum (Roma) tomatoes, seeded, chopped (about 1 1/2 cups)\n4.1 cup whipping (heavy) cream\n5. 1/2 cup shredded fresh Parmesan cheese (2 oz)" />
 
         </LinearLayout>
     </ScrollView>
