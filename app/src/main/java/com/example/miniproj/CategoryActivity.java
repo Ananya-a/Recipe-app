@@ -18,7 +18,6 @@ import java.util.List;
 public class CategoryActivity extends AppCompatActivity {
     private DatabaseReference categoryRef;
     private String selectedCategory;
-
     private ListView listView;
     private CustomAdapter customAdapter;
     private List<Recipe> recipeList;
@@ -55,8 +54,8 @@ public class CategoryActivity extends AppCompatActivity {
                     String name = recipeSnapshot.child("name").getValue(String.class);
                     String ingredients = recipeSnapshot.child("ingredients").getValue(String.class);
                     String instructions = recipeSnapshot.child("instructions").getValue(String.class);
-                    // Create a Recipe object with the retrieved data
-                    Recipe recipe = new Recipe(name, ingredients,instructions, imageName);
+                    String videoLink = recipeSnapshot.child("videoLink").getValue(String.class);
+                    Recipe recipe = new Recipe(name, ingredients,instructions, imageName, videoLink); // Create a Recipe object with the retrieved data
                     recipeList.add(recipe);
                 }
 

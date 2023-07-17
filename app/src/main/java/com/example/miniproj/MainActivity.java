@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.example.miniproj.R;
 
 public class MainActivity extends AppCompatActivity {
-    private static final long delay = 1000;
+    private static final long delay = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, Homepage.class);
+                Intent intent = new Intent(MainActivity.this, Splash.class);
                 startActivity(intent);
                 finish();
             }

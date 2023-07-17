@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Profile extends AppCompatActivity {
 
     ImageView back_btn;
-    Button btn_plan, btn_upload, btn_like;
+    Button btn_plan, btn_upload;
 
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -29,7 +29,6 @@ public class Profile extends AppCompatActivity {
         btn_plan = findViewById(R.id.btn_plan);
         btn_upload = findViewById(R.id.btn_upload);
         back_btn = findViewById(R.id.back_btn);
-//        btn_like = findViewById(R.id.btn_like);
 
         String uid = null;
         if (user != null) {
@@ -41,7 +40,6 @@ public class Profile extends AppCompatActivity {
 
         TextView textViewUid = findViewById(R.id.id);
         textViewUid.setText(uid);
-
 
         btn_plan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,16 +56,6 @@ public class Profile extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-//        btn_like.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Profile.this, Likedrecipesactivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
 
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override

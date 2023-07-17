@@ -23,7 +23,7 @@ public class progress extends AppCompatActivity {
         handler = new Handler();
 
         // Start a progress animation that runs for 4 seconds
-        int animationDuration = 4000;
+        int animationDuration = 2000;
         ObjectAnimator animator = ObjectAnimator.ofInt(progressBar, "progress", 0, 100);
         animator.setDuration(animationDuration);
         animator.start();

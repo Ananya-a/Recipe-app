@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class meal_planner extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
@@ -103,6 +104,7 @@ public class meal_planner extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 saveData();
+                Toast.makeText(meal_planner.this, "Data saved", Toast.LENGTH_SHORT).show();
             }
         });
 

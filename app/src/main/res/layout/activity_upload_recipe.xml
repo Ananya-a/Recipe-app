@@ -99,6 +99,15 @@
             android:hint="Enter the instructions"
             android:textSize="19sp" />
 
+
+        <EditText
+            android:id="@+id/videoLinkEditText"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_weight="1"
+            android:hint="Youtube video link"
+            android:textSize="19sp" />
+
         <Button
             android:id="@+id/btnUpload"
             android:layout_width="match_parent"

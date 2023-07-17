@@ -12,10 +12,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg11"
+        android:background="@drawable/bggg"
         android:orientation="vertical">
-
-        <!-- Replace this with your desired layout for the toolbar -->
 
         <TextView
             android:id="@+id/textView15"
@@ -25,8 +23,18 @@
             android:layout_marginTop="40sp"
             android:layout_marginBottom="40sp"
             android:text="Meal Planner"
+            android:textAlignment="center"
             android:textColor="#000"
             android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="100sp"
+            android:layout_height="50dp"
+            android:background="#6C6969"
+            android:layout_marginLeft="250sp"
+            android:text="Save"
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -227,15 +235,6 @@
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
-
-        <!-- Replace this with your desired layout for the button or any other views -->
-        <Button
-            android:id="@+id/saveBtn"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#68143563"
-            android:text="Save"
-            android:textColor="@color/white" />
 
     </LinearLayout>
 

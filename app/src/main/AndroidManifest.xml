@@ -18,9 +18,6 @@
             android:name=".progress"
             android:exported="false" />
         <activity
-            android:name=".Likedrecipesactivity"
-            android:exported="false" />
-        <activity
             android:name=".Splash2"
             android:exported="false" />
         <activity
@@ -35,21 +32,7 @@
         <activity
             android:name=".CategoryActivity"
             android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".personActivity"
-            android:exported="false" />
-        <activity
-            android:name=".person"
-            android:exported="false" />
-        <activity
-            android:name=".Ingreadapter"
-            android:exported="false" />
-        <activity
-            android:name=".Ingredients"
-            android:exported="false" />
+
         <activity
             android:name=".upload_recipe"
             android:exported="false" />
@@ -74,12 +57,7 @@
         <activity
             android:name=".Homepage"
             android:exported="false" />
-        <activity
-            android:name=".Test"
-            android:exported="false" />
-        <activity
-            android:name=".Home"
-            android:exported="false" />
+
         <activity
             android:name=".SignUp"
             android:exported="false" />

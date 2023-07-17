@@ -28,7 +28,6 @@ import com.google.firebase.storage.StorageReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Queue;
 import java.util.UUID;
 
 
@@ -41,6 +40,7 @@ public class upload_recipe extends AppCompatActivity {
     ImageView ivDisp;
     private EditText ingredientEditText;
     private EditText quantityEditText;
+    private EditText videoLinkEditText;
     private Button addButton;
     private Spinner category_spinner;
 
@@ -52,7 +52,7 @@ public class upload_recipe extends AppCompatActivity {
     private void UploadToDB(String imageName) {
         // Access the Firebase Realtime Database instance and create a reference
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference categoryRef = database.getReference("categories"); // Change "categories" to your desired reference name
+        DatabaseReference categoryRef = database.getReference("categories");
 
         // Create a unique key for the data based on the selected category
         String selectedCategory = category_spinner.getSelectedItem().toString();
@@ -62,7 +62,8 @@ public class upload_recipe extends AppCompatActivity {
         Map<String, Object> recipeMap = new HashMap<>();
         recipeMap.put("image", imageName);
         recipeMap.put("name", name.getText().toString());
-       // recipeMap.put("description", desc.getText().toString());
+        // recipeMap.put("description", desc.getText().toString());
+        recipeMap.put("videoLink", videoLinkEditText.getText().toString());
         recipeMap.put("ingredients", ingredientsTextView.getText().toString());
         recipeMap.put("category", selectedCategory);
         recipeMap.put("instructions", instructionEditText.getText().toString());
@@ -148,6 +149,7 @@ public class upload_recipe extends AppCompatActivity {
         instructionEditText.setText("");
         ingredientsTextView.setText("");
         instructionEditText.setText("");
+        videoLinkEditText.setText("");
     }
 
 
@@ -168,7 +170,7 @@ public class upload_recipe extends AppCompatActivity {
         quantityEditText=findViewById(R.id.quantityEditText);
         category_spinner = findViewById(R.id.category_spinner);
         instructionEditText = findViewById(R.id.instructionEditText);
-
+        videoLinkEditText = findViewById(R.id.videoLinkEditText);
 
         addButton = findViewById(R.id.addButton);
         ingredientsTextView = findViewById(R.id.ingredientsTextView);
@@ -188,8 +190,9 @@ public class upload_recipe extends AppCompatActivity {
             public void onClick(View v) {
                 String inst = instructionEditText.getText().toString().trim();
                 String nameField = name.getText().toString().trim();
+                String videoLink = videoLinkEditText.getText().toString().trim();
 
-                if(!inst.isEmpty() && !nameField.isEmpty())
+                if(!inst.isEmpty() && !nameField.isEmpty() && !videoLink.isEmpty())
                 {
                     uploadImage();
 
