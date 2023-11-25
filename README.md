@@ -6,7 +6,7 @@ Java and Firebase join forces in the 'Recipe Repository' app, streamlining the w
 A recipe app featuring over 10 recipes with the ability to upload recipes by providing instructions and optional video links, offering an engaging cooking experience and also a Meal Planner for efficiency.
 
 ### :two: Architecture Diagram
-  <img src="" width=700>
+  <img src="https://private-user-images.githubusercontent.com/72432803/285587508-8663c1e7-37b1-4a96-a97d-78ff5e7f948f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDA5MTEyNTAsIm5iZiI6MTcwMDkxMDk1MCwicGF0aCI6Ii83MjQzMjgwMy8yODU1ODc1MDgtODY2M2MxZTctMzdiMS00YTk2LWE5N2QtNzhmZjVlN2Y5NDhmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzExMjUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMTI1VDExMTU1MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTJmNjQwNjgzMjc2Y2JmNDFhM2NkZWE5NTZjOGY2MGRiNjgxYjY2Mjg1ZWFlYzU0ZTdkYWUxNmVjZTU3YzMyNjImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.6DpfTrFQDLKZgZuVPfOEx5TqS7Pu--pVsMPzJoVqH9I" width=400>
 
 ### :three: Prerequisites
 HARDWARE REQUIREMENTS <br>
